@@ -1,0 +1,102 @@
+<div class="main-panel">
+    <div class="content">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-8">
+                    <div class="card">
+                        <div class="card-header" data-background-color="purple">
+                            <h4 class="title">Dashboard Details</h4>
+                            <p class="category">Complete your profile</p>
+                        </div>
+                        <div class="card-content">
+                            <form #memberProfileForm="ngForm" (ngSubmit)="saveMember()">
+                                <div class="row">
+                                    <div class="col-md-2">
+                                        <div class="form-group label-floating">
+                                            <label class="control-label">Family Id</label>
+                                            <input type="text" class="form-control" disabled>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-5">
+                                        <div class="form-group label-floating">
+                                            <label class="control-label">Family Name</label>
+                                            <input type="text" class="form-control">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-5">
+                                        <div class="form-group label-floating">
+                                            <label class="control-label">Family Head</label>
+                                            <input type="text" class="form-control">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <div class="form-group label-floating">
+                                            <label class="control-label">Email Id</label>
+                                            <input type="text" class="form-control">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="form-group label-floating">
+                                            <label class="control-label">Contact Number</label>
+                                            <input type="text" class="form-control">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                            <div class="form-group label-floating">
+                                                <label class="control-label">Catagory</label>
+                                                <input type="text" class="form-control">
+                                            </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="form-group label-floating">
+                                            <label class="control-label">Adress</label>
+                                            <input type="text" class="form-control">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <div class="form-group label-floating">
+                                            <label class="control-label">City</label>
+                                            <input type="text" class="form-control">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="form-group label-floating">
+                                            <label class="control-label">Country</label>
+                                            <input type="text" class="form-control">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="form-group label-floating">
+                                            <label class="control-label">Postal Code</label>
+                                            <input type="text" class="form-control">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="form-group">
+                                            <label>About Family</label>
+                                            <div class="form-group label-floating">
+                                                <label class="control-label"> Small discription about family.</label>
+                                                <textarea class="form-control" rows="5"></textarea>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button type="submit" [disabled]="!memberProfileForm.form.valid" class="btn btn-primary pull-right">Save Profile</button>
+                                <div class="clearfix"></div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</div>

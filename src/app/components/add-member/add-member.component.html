@@ -1,31 +1,26 @@
 <div class="col-md-4">
     <div class="card card-stats">
             <div class="card-header" data-background-color="purple">
-                    <i class="material-icons">account_circle</i>
+                    <i class="material-icons">face</i>
                 </div>
         <div class="card-content">
             <p class="category">Members</p>
-            <h3 class="title">+1</h3>
+            <h3 class="title">{{members.length}}</h3>
+                <div class="form-group">
+                    <label class="control-label">Member Name</label>
+                    <input type="text" class="form-control" #newMem>
             
-            <a href="#pablo" class="btn btn-primary btn-round">Add Members</a>
+                <a (click)="addMember(newMem.value)" class="btn btn-primary btn-round">Add Members</a>
+               </div>
             <hr>
                 <div class="tab-pane active" id="profile">
                     <table class="table">
                         <tbody>
-                            <tr>
-                                <td>
-                                    <div class="checkbox">
-                                        <label>
-                                            <input type="checkbox" name="optionsCheckboxes" checked>
-                                        </label>
-                                    </div>
-                                </td>
-                                <td>Sample user</td>
-                                <td class="td-actions text-right">
-                                    <button type="button" rel="tooltip" title="Edit Task" class="btn btn-primary btn-simple btn-xs">
-                                        <i class="material-icons">edit</i>
-                                    </button>
-                                    <button type="button" rel="tooltip" title="Remove" class="btn btn-danger btn-simple btn-xs">
+                            <tr *ngFor="let member of members">
+                                <td> <i class="material-icons">person_pin_circle</i></td>
+                                <td class="text-left">{{member}}</td>
+                                <td class="td-actions text-left">
+                                    <button (click)="deleteMember(member)" type="button" rel="tooltip" title="Remove" class="btn btn-danger btn-simple btn-xs">
                                         <i class="material-icons">close</i>
                                     </button>
                                 </td>
